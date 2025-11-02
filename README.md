@@ -140,5 +140,7 @@ Presenca → registros de presença
 
 
 💻 Autor:
-👤 Gabriel Mello
+
+👨‍💻 Gabriel Mello
+
 📘 Projeto acadêmico desenvolvido com fins educacionais.
