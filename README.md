@@ -67,42 +67,45 @@ cd backend
 docker build -t presenca-backend .
 docker run -d -p 3000:3000 presenca-backend
 
-🧠 Endpoints Principais
-👤 Usuários (/auth)
-Método	Endpoint	Descrição
-POST	/auth/register	Cria um novo usuário
-POST	/auth/login	Faz login e retorna token JWT
+## 🧠 Endpoints Principais
+
+### 👤 Usuários (`/auth`)
+
+| Método | Endpoint | Descrição |
+| :--- | :--- | :--- |
+| POST | `/auth/register` | Cria um novo usuário |
+| POST | `/auth/login` | Faz login e retorna token JWT |
 
 📦 Exemplo de registro:
-
+```bash
 {
   "nome": "Gabriel Mello",
   "email": "gabriel@email.com",
   "senha": "123456"
 }
-
+```
 
 📦 Exemplo de login:
-
+```bash
 {
   "email": "gabriel@email.com",
   "senha": "123456"
 }
-
+```
 🧾 Presenças (/presenca)
 Método	Endpoint	Descrição
 GET	/presenca	Lista todas as presenças (requer token JWT)
 POST	/presenca	Registra uma nova presença (requer token JWT)
 
 📦 Exemplo de body:
-
+```bash
 {
   "nome": "João Silva",
   "ra": "12345",
   "turma": "ADS 3A",
   "data": "2025-10-30"
 }
-
+```
 
 ⚠️ Todas as rotas /presenca exigem cabeçalho de autenticação:
 
@@ -127,11 +130,13 @@ Usuario → usuários cadastrados
 
 Presenca → registros de presença
 
-🧰 Variáveis e Configurações
-Configuração	   Valor Padrão	        Descrição
-Porta	               3000	            Porta padrão da API
-JWT_SECRET	    PresencaSecret	      Chave de criptografia do token
-Banco	              SQLite	          Armazenamento local simples
+## 🧰 Variáveis e Configurações
+
+| Configuração | Valor Padrão | Descrição |
+| :--- | :--- | :--- |
+| Porta | 3000 | Porta padrão da API |
+| JWT_SECRET | PresencaSecret | Chave de criptografia do token |
+| Banco | SQLite | Armazenamento local simples |
 
 
 💻 Autor:
