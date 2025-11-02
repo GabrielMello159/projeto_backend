@@ -20,6 +20,7 @@ Banco de dados em SQLite, com autenticação via token JWT.
 
 🌍 CORS
 
+```bash
 📁 Estrutura de Pastas
 backend/
 │
@@ -48,6 +49,7 @@ backend/
     └── services/
         ├── userService.js
         └── presencaService.js
+```
 
 🚀 Como Rodar Localmente
 1️⃣ Instalar dependências
