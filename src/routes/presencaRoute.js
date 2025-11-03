@@ -79,4 +79,31 @@ router.get('/', authenticationToken, presencaController.getAll.bind(presencaCont
  */
 router.post('/', authenticationToken, presencaController.create.bind(presencaController));
 
+/**
+ * @swagger
+ * /presenca/{id}:
+ *   delete:
+ *     summary: Deleta uma presença pelo ID
+ *     tags: [Presença]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID da presença a ser deletada
+ *     responses:
+ *       200:
+ *         description: Presença deletada com sucesso
+ *       404:
+ *         description: Presença não encontrada
+ *       401:
+ *         description: Token inválido
+ *       500:
+ *         description: Erro ao deletar presença
+ */
+router.delete('/:id', authenticationToken, presencaController.delete.bind(presencaController));
+
 module.exports = router;

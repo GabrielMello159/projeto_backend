@@ -9,6 +9,15 @@ class PresencaService {
     if (!nome || !ra || !turma || !dataPresenca) throw new Error('Campos obrigatórios');
     return await presencaRepository.create(data);
   }
+
+
+  async deletarPresenca(id) {
+    const deletado = await presencaRepository.delete(id);
+    if (!deletado) throw new Error('Presença não encontrada');
+    return deletado;
+  }
+
+
 }
 
 module.exports = new PresencaService();

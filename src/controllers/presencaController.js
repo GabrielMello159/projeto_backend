@@ -20,7 +20,23 @@ class PresencaController {
             res.status(400).json({ message: 'Erro ao criar presença' })
         }
     }
-}
+
+
+    async delete(req, res) {
+        const id = req.params.id
+        try {
+            const resultado = await presencaService.deletarPresenca(id)
+            if (!resultado) {
+                return res.status(404).json({ message: 'Presença não encontrada' })
+            }
+            res.status(200).json({ message: 'Presença deletada com sucesso' })
+        } catch (error) {
+            console.error('Erro ao deletar presença:', error)
+            res.status(500).json({ message: 'Erro ao deletar presença' })
+        }
+    }
+
+ }
 
 
 module.exports = new PresencaController()

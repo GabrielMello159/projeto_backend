@@ -7,6 +7,13 @@ class PresencaRepository {
   async create(data) {
     return await Presenca.create(data);
   }
+  async delete(id) {
+    const deleted = await Presenca.destroy({
+      where: { id }
+    });
+    return deleted;
+
+  }
 }
 
 module.exports = new PresencaRepository();
