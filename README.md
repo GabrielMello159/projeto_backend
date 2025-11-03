@@ -71,10 +71,14 @@ docker run -d -p 3000:3000 presenca-backend
 
 ### 👤 Usuários (`/auth`)
 
-| Método | Endpoint | Descrição |
-| :--- | :--- | :--- |
-| POST | `/auth/register` | Cria um novo usuário |
-| POST | `/auth/login` | Faz login e retorna token JWT |
+| Método | Endpoint        | Descrição                     |
+| :----- | :------------- | :---------------------------- |
+| POST   | `/auth/register`| Cria um novo usuário          |
+| POST   | `/auth/login`   | Faz login e retorna token JWT |
+| GET    | `/presenca`     | Lista todas as presenças      |
+| POST   | `/presenca`     | Cria uma nova presença        |
+| DELETE | `/presenca/:id` | Deleta uma presença pelo ID   |
+
 
 📦 Exemplo de registro:
 ```bash
