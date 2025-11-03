@@ -14,7 +14,7 @@ const swaggerOptions = {
     security: [{ bearerAuth: [] }],
     servers: [{ url: 'http://localhost:3000', description: 'Servidor Local' },
     {
-      url: 'https://presenca-faculdade-api.azurewebsites.net',
+      url: 'https://faculdade-tech.azurewebsites.net/',
       description: 'SERVIDOR AZURE'
 
     }
